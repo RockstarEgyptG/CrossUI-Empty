@@ -19,7 +19,56 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.HiddenInput")
+                .setHost(host,"xui_ui_hiddeninput1")
+                .setValue("")
+            );
+            
+            append(
+                xui.create("xui.UI.HiddenInput")
+                .setHost(host,"xui_ui_hiddeninput2")
+                .setValue("")
+            );
+            
+            append(
+                xui.create("xui.UI.RadioBox")
+                .setHost(host,"xui_ui_radiobox1")
+                .setItems([
+                    {
+                        "id" : "a",
+                        "caption" : "item 1",
+                        "imageClass" : "xui-icon-number1"
+                    },
+                    {
+                        "id" : "b",
+                        "caption" : "item 2",
+                        "imageClass" : "xui-icon-number2"
+                    },
+                    {
+                        "id" : "c",
+                        "caption" : "item 3",
+                        "imageClass" : "xui-icon-number3"
+                    },
+                    {
+                        "id" : "d",
+                        "caption" : "item 4",
+                        "imageClass" : "xui-icon-number4",
+                        "disabled" : true
+                    }
+                ])
+                .setLeft("-0.7619047619047619em")
+                .setTop("0.7619047619047619em")
+                .setWidth("9.980952380952381em")
+                .setHeight("35.58095238095238em")
+                .setLabelSize("1.5em")
+                .setLabelPos("top")
+                .setLabelCaption("RadioBox")
+                .setLabelHAlign("left")
+                .setValue("a")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
